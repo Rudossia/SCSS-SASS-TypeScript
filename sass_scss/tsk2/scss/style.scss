@@ -1,0 +1,45 @@
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background: #f4f4f4;
+  padding: 30px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 25px;
+  color: #222;
+}
+
+.numbers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.numbers span {
+  display: inline-block;
+  min-width: 55px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.numbers span:hover {
+  transform: scale(1.08);
+}
+
+@for $i from 1 through 100 {
+  .num-#{$i} {
+    color: rgb($i, 256 - $i, 0);
+  }
+}
